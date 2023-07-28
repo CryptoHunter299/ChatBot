@@ -11,7 +11,7 @@ import json
 from glob import glob
 import pytz
 from datetime import datetime
-from config import TOKEN, ADMIN, OWNER, CHANNEL, GROUP, PROJECT_NAME
+from config import TOKEN, ADMIN, OWNER, CHANNEL, GROUP, GROUP2, PROJECT_NAME
 
 token = TOKEN
 bot = amanobot.Bot(token)
