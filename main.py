@@ -67,28 +67,28 @@ def handle(update):
 			
 			if 'photo' in update:
 				photo = update['photo'][0]['file_id']
-				if update.caption:
+				if 'caption' in update:
 					bot.sendPhoto(queue["occupied"][uid], photo, caption=update['caption'])
 				else:
 					bot.sendPhoto(queue["occupied"][uid], photo)
 					
 			if 'video' in update:
 				video = update['video']['file_id']
-				if update.caption:
+				if 'caption' in update:
 					bot.sendVideo(queue["occupied"][uid], video, caption=update['caption'])
 				else:
 					bot.sendVideo(queue["occupied"][uid], video)
 					
 			if 'document' in update:
 				document = update['document']['file_id']
-				if update.caption:
+				if 'caption' in update:
 					bot.sendDocument(queue["occupied"][uid], document, caption=update['caption'])
 				else:
 					bot.sendDocument(queue["occupied"][uid], document)
 					
 			if 'audio' in update:
 				audio = update['audio']['file_id']
-				if update.caption:
+				if 'caption' in update:
 					bot.sendAudio(queue["occupied"][uid], audio, caption=update['caption'])
 				else:
 					bot.sendAudio(queue["occupied"][uid], audio)
@@ -99,7 +99,7 @@ def handle(update):
 			        
 			if 'voice' in update:
 				voice = update['voice']['file_id']
-				if update.caption:
+				if 'caption' in update:
 					bot.sendVoice(queue["occupied"][uid], voice, caption=update['caption'])
 				else:
 					bot.sendVoice(queue["occupied"][uid], voice)
