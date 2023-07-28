@@ -103,7 +103,7 @@ def handle(update):
 		if text == "/start" or text == "/refresh":
 			if not uid in queue["occupied"]:
 				keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}"),InlineKeyboardButton(text="ɢʀᴜᴘ ᴄʜᴀᴛ", url=f"t.me/{GROUP}"),InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{CHANNEL}")]])
-				bot.sendMessage(uid, f"⚡️ SELAMAT DATANG DI {PROJECT_NAME} ⚡️\n\n_🇮🇩 Semoga Dapat teman atau jodoh\n🇳🇿 I hope you can make a friend or a partner\n\n💬 untuk mencari teman obrolan gunakan perintah /search_ 🔊 GRUP MUTUALAN 🔊\n\nMasuk sini cari temen baruu  👉\n😋❤ @Cari_teman_pacar_seindonesia\n😋💚  @caritemanasikk", parse_mode='MarkDown', disable_web_page_preview=True , reply_markup=keyboard)
+				bot.sendMessage(uid, f"⚡️ SELAMAT DATANG DI {PROJECT_NAME} ⚡️\n\n_🇮🇩 Semoga Dapat teman atau jodoh\n\n💬 untuk mencari teman obrolan gunakan perintah /search_\n\n🔊 GRUP MUTUALAN 🔊\n\nMasuk sini cari temen baruu  👉\n😋❤ @Cari_teman_pacar_seindonesia\n😋💚  @caritemanasikk", parse_mode='MarkDown', disable_web_page_preview=True , reply_markup=keyboard)
 		if 'message_id' in update:
 			if not uid in queue["occupied"]:
 				if text != "/start" and text != "Pengguna👤" and text !="Next ▶️" and text != "/refresh" and text != "/help" and text != "/search" and text != "Search 🔍" and text != "MENU BOT✅" and text != "🔙 Main Menu" and text != "Info Profile 📌" and text != "Covid-19〽️"  and text != "/user":
