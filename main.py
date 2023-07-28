@@ -67,28 +67,28 @@ def handle(update):
 			
 			if 'photo' in update:
 				photo = update['photo'][0]['file_id']
-				if update['caption']:
+				if update.caption:
 					bot.sendPhoto(queue["occupied"][uid], photo, caption=update['caption'])
 				else:
 					bot.sendPhoto(queue["occupied"][uid], photo)
 					
 			if 'video' in update:
 				video = update['video']['file_id']
-				if update['caption']:
+				if update.caption:
 					bot.sendVideo(queue["occupied"][uid], video, caption=update['caption'])
 				else:
 					bot.sendVideo(queue["occupied"][uid], video)
 					
 			if 'document' in update:
 				document = update['document']['file_id']
-				if update['caption']:
+				if update.caption:
 					bot.sendDocument(queue["occupied"][uid], document, caption=update['caption'])
 				else:
 					bot.sendDocument(queue["occupied"][uid], document)
 					
 			if 'audio' in update:
 				audio = update['audio']['file_id']
-				if update['caption']:
+				if update.caption:
 					bot.sendAudio(queue["occupied"][uid], audio, caption=update['caption'])
 				else:
 					bot.sendAudio(queue["occupied"][uid], audio)
@@ -99,7 +99,7 @@ def handle(update):
 			        
 			if 'voice' in update:
 				voice = update['voice']['file_id']
-				if update['caption']:
+				if update.caption:
 					bot.sendVoice(queue["occupied"][uid], voice, caption=update['caption'])
 				else:
 					bot.sendVoice(queue["occupied"][uid], voice)
@@ -117,7 +117,7 @@ def handle(update):
 		if text == "/start" or text == "/refresh":
 			if not uid in queue["occupied"]:
 				keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}")],[InlineKeyboardButton(text="ɢʀᴜᴘ ᴄʜᴀᴛ", url=f"t.me/{GROUP}")],[InlineKeyboardButton(text="ɢʀᴜᴘ ᴄʜᴀᴛ", url=f"t.me/{GROUP2}")],[InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{CHANNEL}")]])
-				bot.sendMessage(uid, f"⚡️ SELAMAT DATANG DI {PROJECT_NAME} ⚡️\n\n_🇮🇩 Semoga Dapat teman atau jodoh\n\n💬 untuk mencari teman obrolan gunakan perintah /search_\n\n🔊 GRUP MUTUALAN 🔊\n\nMasuk sini cari temen baruu  👉\n😋❤ @Cari_teman_pacar_seindonesia\n😋💚  @caritemanasikk", parse_mode='MarkDown', disable_web_page_preview=True , reply_markup=keyboard)
+				bot.sendMessage(uid, f"⚡️ SELAMAT DATANG DI {PROJECT_NAME} ⚡️\n\n_🇮🇩 Semoga Dapat teman atau jodoh\n\n💬 untuk mencari teman obrolan gunakan perintah /search_\n\n*🔊 GRUP MUTUALAN 🔊\n\nMasuk sini cari temen baruu 👉\n😋❤ @Cari_teman_pacar_seindonesia\n😋💚 @caritemanasikk*", parse_mode='MarkDown', disable_web_page_preview=True , reply_markup=keyboard)
 		if 'message_id' in update:
 			if not uid in queue["occupied"]:
 				if text != "/start" and text != "Pengguna👤" and text !="Next ▶️" and text != "/refresh" and text != "/help" and text != "/search" and text != "Search 🔍" and text != "MENU BOT✅" and text != "🔙 Main Menu" and text != "Info Profile 📌" and text != "Covid-19〽️"  and text != "/user":
